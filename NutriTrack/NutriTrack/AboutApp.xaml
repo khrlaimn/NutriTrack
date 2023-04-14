@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriTrack.AboutApp">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <FlexLayout 
+                    Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+
+                    <Frame CornerRadius="180"
+                           BorderColor="Black"
+                            HeightRequest="80"
+                            WidthRequest="80">
+
+                        <ImageButton Source="GambarSaya.JPG"
+                                        Aspect="AspectFill" />
+
+                    </Frame>
+                </FlexLayout>
+
+
+                <Label 
+                    Text="Developer"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="Caption"
+                    FontAttributes="Bold"
+                    TextColor="Black" 
+                    />
+
+
+                <Label
+                    Text="Muhammad Khairul Aiman Bin Ahmad Faiza (SW01082162)"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="Medium"
+                />
+
+                <FlexLayout 
+                    Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+
+                    <Frame CornerRadius="180"
+                           BorderColor="Black"
+                            HeightRequest="80"
+                            WidthRequest="80">
+
+                        <ImageButton Source="NutriTrackLogo.png"
+                                        Aspect="AspectFill" />
+
+                    </Frame>
+                </FlexLayout>
+
+                <Label
+                    Text="NutriTrack is a mental health mobile app designed for university students to track their meal expenses and find healthy and affordable meal options on campus. It allows users to register their meal expenses, covering a wide variety of cafeteria meals and providing nutritional information. NutriTrack aims to make healthy eating more accessible and cost-effective for its users, helping them make wise decisions about their food consumption and spending."
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"  
+                    FontSize="Body"
+                />
+
+                <Label
+                    Text="Version 1.0"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontAttributes="Italic"
+                    FontSize="Micro"
+                 />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
