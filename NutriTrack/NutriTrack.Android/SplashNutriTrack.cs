@@ -11,7 +11,7 @@ using NutriTrack.Droid;
 
 namespace NutriTrack.Droid
 {
-    [Activity(Label = "SplashActivity", Theme = "@style/Splash", MainLauncher = true)]
+    [Activity(Label = "NutriTrack", Icon = "@drawable/ic_launcher", Theme = "@style/Splash", MainLauncher = true)]
     public class SplashNutriTrack : Activity
     {
         public SplashNutriTrack()
