@@ -13,6 +13,13 @@ namespace NutriTrack
         public MainPage()
         {
             InitializeComponent();
+            dateLabel.Text += DateTime.Now.ToString("dddd, MMMM dd yyyy");
         }
+        async void OnBudgetingClick(object sender, EventArgs args)
+        {
+
+            await Navigation.PushAsync(new AboutApp());
+        }
+
     }
 }
