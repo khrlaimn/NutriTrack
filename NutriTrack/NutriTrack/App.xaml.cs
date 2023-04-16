@@ -11,7 +11,9 @@ namespace NutriTrack
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new BurgerIcon();
+            //MainPage = new NavBar();
+            MainPage = new NavigationPage(new NavBar());
+            //MainPage = new BurgerIcon();
         }
 
         protected override void OnStart()

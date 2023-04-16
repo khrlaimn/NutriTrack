@@ -10,11 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace NutriTrack
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BurgerIconDetail : ContentPage
+    public partial class NavBar : TabbedPage
     {
-        public BurgerIconDetail()
+        public NavBar ()
         {
             InitializeComponent();
+            dateLabel.Text += DateTime.Now.ToString("dddd, MMMM dd yyyy");
+        }
+        async void OnBudgetingClick(object sender, EventArgs args)
+        {
+
+            await Navigation.PushAsync(new AboutApp());
         }
     }
 }
