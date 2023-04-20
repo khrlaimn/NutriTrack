@@ -20,7 +20,12 @@ namespace NutriTrack
         async void OnBudgetingClick(object sender, EventArgs args)
         {
 
-            await Navigation.PushAsync(new AboutApp());
+            await Navigation.PushAsync(new AboutUs());
+        }
+        async void OnAboutsUsclicked(object sender, EventArgs args)
+        {
+
+            await Navigation.PushAsync(new AboutUs());
         }
     }
 }

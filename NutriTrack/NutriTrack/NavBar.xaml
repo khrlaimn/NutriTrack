@@ -3,10 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NutriTrack.NavBar"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-            android:TabbedPage.ToolbarPlacement="Bottom"
-            android:TabbedPage.UnselectedTabColor="Black"
-            android:TabbedPage.SelectedTabColor="Gray">
-
+            android:TabbedPage.ToolbarPlacement="Bottom">
+    <!--android:TabbedPage.UnselectedTabColor="Black"
+    android:TabbedPage.SelectedTabColor="Gray"-->
 
     <!--Pages can be added as references or inline-->
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,87 +90,43 @@
         </StackLayout>
 
     </ContentPage>
-    
-    
-    <ContentPage Title="Add Expense"  IconImageSource="PlusButton.png" />
 
-    
+
+    <ContentPage Title="Add Expense"  IconImageSource="PlusButton.png"/>
+
+
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  Title="Profile"  IconImageSource="ProfileButton.png">
 
-        <ContentPage.Content>
-            <ScrollView>
-                <StackLayout>
+        <StackLayout BackgroundColor="White">
 
-                    <FlexLayout 
-                    Direction="Row"
-                    AlignItems="Center"
-                    JustifyContent="SpaceEvenly">
-
-                        <Frame CornerRadius="180"
-                           BorderColor="Black"
-                            HeightRequest="80"
-                            WidthRequest="80">
-
-                            <ImageButton Source="GambarSaya.JPG"
-                                        Aspect="AspectFill" />
-
-                        </Frame>
-                    </FlexLayout>
-
-
-                    <Label 
-                    Text="Developer"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    FontSize="Caption"
-                    FontAttributes="Bold"
-                    TextColor="Black" 
-                    />
-
-
-                    <Label
-                    Text="Muhammad Khairul Aiman Bin Ahmad Faiza (SW01082162)"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    FontSize="Medium"
+            <Label
+            Text="Hello Aiman"
+            FontAttributes="Bold" 
+            TextColor="Black"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="Medium"
                 />
 
-                    <FlexLayout 
-                    Direction="Row"
-                    AlignItems="Center"
-                    JustifyContent="SpaceEvenly">
+            <FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="Center"
+            VerticalOptions="Start" 
+            Padding="5, 5, 10, 10 ">
+                
+                <Button Text="About Us"
+            Clicked="OnAboutsUsclicked"
+            TextColor="White"
+            BackgroundColor="Black"
+            CornerRadius="5"
+            WidthRequest="250"
+            HeightRequest="60" />
 
-                        <Frame CornerRadius="180"
-                           BorderColor="Black"
-                            HeightRequest="80"
-                            WidthRequest="80">
+            </FlexLayout>
 
-                            <ImageButton Source="NutriTrackLogo.png"
-                                        Aspect="AspectFill" />
-
-                        </Frame>
-                    </FlexLayout>
-
-                    <Label
-                    Text="NutriTrack is a mental health mobile app designed for university students to track their meal expenses and find healthy and affordable meal options on campus. It allows users to register their meal expenses, covering a wide variety of cafeteria meals and providing nutritional information. NutriTrack aims to make healthy eating more accessible and cost-effective for its users, helping them make wise decisions about their food consumption and spending."
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"  
-                    FontSize="Body"
-                />
-
-                    <Label
-                    Text="Version 1.0"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    FontAttributes="Italic"
-                    FontSize="Micro"
-                 />
-
-                </StackLayout>
-            </ScrollView>
-        </ContentPage.Content>
+        </StackLayout>
 
     </ContentPage>
 </TabbedPage>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace NutriTrack
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AboutApp : ContentPage
+	public partial class AboutUs : ContentPage
 	{
-		public AboutApp ()
+		public AboutUs ()
 		{
 			InitializeComponent ();
 		}
