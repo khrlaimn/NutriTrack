@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace NutriTrack
+namespace NutriTrack 
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NavBar : TabbedPage
