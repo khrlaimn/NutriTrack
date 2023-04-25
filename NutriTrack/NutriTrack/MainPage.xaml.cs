@@ -9,14 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace NutriTrack
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NavBarTop : TabbedPage
-    {
-        public NavBarTop ()
-        {
-            InitializeComponent();
-            dateLabel.Text += DateTime.Now.ToString("dddd, MMMM dd yyyy");
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class MainPage : ContentPage
+	{
+		public MainPage ()
+		{
+			InitializeComponent ();
+		}
         async void OnBudgetingClick(object sender, EventArgs args)
         {
 

@@ -115,7 +115,7 @@
             JustifyContent="Center"
             VerticalOptions="Start" 
             Padding="5, 5, 10, 10 ">
-                
+
                 <Button Text="About Us"
             Clicked="OnAboutsUsclicked"
             TextColor="White"

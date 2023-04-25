@@ -11,11 +11,8 @@ namespace NutriTrack
             InitializeComponent();
 
             //MainPage = new MainPage();
-            //MainPage = new BurgerIcon();
-            //MainPage = new NavBarTop();7
-            MainPage = new NavigationPage(new NavBar());
             //MainPage = new NavigationPage(new NavBar());
-            //NavigationPage.SetHasNavigationBar(MainPage, false);
+            MainPage = new BurgerIcon();
 
         }
 
