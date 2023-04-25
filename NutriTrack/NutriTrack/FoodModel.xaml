@@ -2,11 +2,101 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NutriTrack.FoodModel">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <StackLayout>
+
+        <CollectionView x:Name="FoodCollectionView">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <StackLayout>
+
+                        <FlexLayout 
+                            Direction="Row"
+                            AlignItems="Center"
+                            JustifyContent="SpaceEvenly">
+
+                            <Frame
+                                BorderColor="Black"
+                                HeightRequest="200"
+                                WidthRequest="200">
+
+                                <Image Grid.RowSpan="2"
+                                       Source="{Binding FoodImage}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="150"
+                                       WidthRequest="150"/>
+                            </Frame>
+                        </FlexLayout>
+
+
+                        <Label 
+                            Text="{Binding FoodName}"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            FontSize="Header"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+
+                        <Label 
+                            Text="{Binding FoodStallName}"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            FontSize="Body"
+                           FontAttributes="Italic"
+                            TextColor="Black" />
+
+                        <Label FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="RM " />
+                                    <Span Text="{Binding FoodPrice}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Calories " />
+                                    <Span Text="{Binding FoodCalories}" />
+                                    <Span Text="   Carbs " />
+                                    <Span Text="{Binding FoodCarbo}" />
+                                    <Span Text="   Fat " />
+                                    <Span Text="{Binding FoodFat}" />
+                                    <Span Text="   Protein " />
+                                    <Span Text="{Binding FoodProtein}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Button Text="Add"
+                                x:Name="addButton"
+                                Clicked="SaveButton"
+                                TextColor="White"
+                                BackgroundColor="Black"
+                                WidthRequest="200"
+                                CornerRadius="5"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="Center"/>
+
+                        <Label Text="     "/>
+
+                    </StackLayout>
+                    
+                </DataTemplate>
+                
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+
+    </StackLayout>
+   
 </ContentPage>
