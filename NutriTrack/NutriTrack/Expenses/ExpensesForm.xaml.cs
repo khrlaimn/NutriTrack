@@ -15,7 +15,7 @@ namespace NutriTrack.Expenses
     public partial class ExpensesForm : ContentPage
     {
         FirebaseHelper firebaseHelper = new FirebaseHelper();
-        private double totalSpent = 0.00;
+        private double totalPrice = 0.00;
         public ExpensesForm()
         {
             InitializeComponent();
@@ -25,15 +25,31 @@ namespace NutriTrack.Expenses
         {
             //Food Name
             string name = inputFoodName.Text;
-            resFoodName.Text = name;
+            resFoodName.Text = "Food Name: " + name;
 
             //Food Price
             double price = Convert.ToDouble(inputFoodPrice.Text);
-            resFoodPrice.Text = "RM" + price.ToString("0.00");
+            resFoodPrice.Text = "Price: RM" + price.ToString("0.00");
 
             //Food Type
             string selectedFood = foodType.SelectedItem as string;
-            resFoodType.Text = selectedFood;
+            resFoodType.Text = "Food Type: " + selectedFood;
+
+            //Food Calories
+            string cal = inputCalories.Text;
+            resCalories.Text = "Calories: " + cal;
+
+            //Food Carbo
+            string carbo = inputCarbo.Text;
+            resCarbo.Text = "Carbo: " + carbo;
+
+            //Food Fat
+            string fat = inputFat.Text;
+            resFat.Text = "Fat: " + fat;
+
+            //Food Protein
+            string protein = inputProtein.Text;
+            resProtein.Text = "Protein: " + protein;
         }
         
         //Reset Button
@@ -41,9 +57,17 @@ namespace NutriTrack.Expenses
         {
             inputFoodName.Text = "";
             inputFoodPrice.Text = "";
+            inputCalories.Text = "";
+            inputCarbo.Text = "";
+            inputFat.Text = "";
+            inputProtein.Text = "";
             foodType.SelectedIndex = -1;
             resFoodName.Text = "Food Name: ";
-            resFoodPrice.Text = "RM";
+            resFoodPrice.Text = "Price: RM";
+            resCalories.Text = "Calories: ";
+            resCarbo.Text = "Carbo: ";
+            resFat.Text = "Fat: ";
+            resProtein.Text = "Protein: ";
             resFoodType.Text = "Food Type: ";
         }
 
@@ -57,22 +81,34 @@ namespace NutriTrack.Expenses
         async void OnSaveRecord(object sender, EventArgs e)
         {
 
-            var selectdate = selectDate.Date.ToString("dd/MM/yyyy");
-
             string name = inputFoodName.Text;
             resFoodName.Text = "Food Name: " + name;
 
             double price = Convert.ToDouble(inputFoodPrice.Text);
-            resFoodPrice.Text = "RM" + price.ToString("0.00");
+            resFoodPrice.Text = "Price: RM" + price.ToString("0.00");
 
-            string selectedMeal = foodType.SelectedItem as string;
-            resFoodType.Text = "Food Type: " + selectedMeal;
+            string cal = inputCalories.Text;
+            resCalories.Text = "Calories: " + cal;
+
+            string carbo = inputCarbo.Text;
+            resCarbo.Text = "Carbo: " + carbo;
+
+            string fat = inputFat.Text;
+            resFat.Text = "Fat: " + fat;
+
+            string protein = inputProtein.Text;
+            resProtein.Text = "Protein: " + protein;
+
+            string selectedFoodType = foodType.SelectedItem as string;
+            resFoodType.Text = "Food Type: " + selectedFoodType;
+
+            var selectdate = selectDate.Date.ToString("dd/MM/yyyy");
 
             // Update Total Price 
-            totalSpent = totalSpent += price;
-            resFoodTotal.Text = "Total: RM" + totalSpent.ToString("0.00");
+            totalPrice = totalPrice += price;
+            resFoodTotal.Text = "Total: RM" + totalPrice.ToString("0.00");
 
-            await firebaseHelper.AddRecord(selectdate, selectedMeal, name, price, totalSpent);
+            await firebaseHelper.AddRecord(name, price, cal, carbo, fat, protein, selectedFoodType, selectdate, totalPrice);
 
             await DisplayAlert("Record Saved", "Expense Record Saved ^_^", "OK");
         }

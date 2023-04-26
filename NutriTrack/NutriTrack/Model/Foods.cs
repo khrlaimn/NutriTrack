@@ -6,16 +6,16 @@ namespace NutriTrack
 {
     class Foods
     {
-        public string FoodType { get; set; }
-        public double TotalPrice { get; set; }
-        public string DateRecorded { get; set; }
         public string FoodName { get; set; }
+        public double FoodPrice { get; set; }
+        public string FoodCalories { get; set; }
+        public string FoodCarbo { get; set; }
+        public string FoodFat { get; set; }
+        public string FoodProtein { get; set; }
+        public string FoodType { get; set; }
+        public string DateRecorded { get; set; }
+        public double TotalPrice { get; set; }
         public string FoodStallName { get; set; }
         public string FoodImage { get; set; }
-        public double FoodPrice { get; set; }
-        public double FoodCalories { get; set; }
-        public double FoodCarbo { get; set; }
-        public double FoodFat { get; set; }
-        public double FoodProtein { get; set; }
     }
 }

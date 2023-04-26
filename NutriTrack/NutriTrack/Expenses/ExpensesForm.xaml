@@ -5,21 +5,47 @@
              Title="Meal Expenses">
     <ScrollView>
         <StackLayout>
+
             <!--Food Name-->
-            <FlexLayout>
-                <Label Text="Name:"  Padding="5,10,100,10" FontSize="20"/>
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Name:" Padding="5" FontSize="20" WidthRequest="120"/>
                 <Entry x:Name="inputFoodName" Placeholder="Enter food" Keyboard="Text"/>
             </FlexLayout>
 
             <!--Food Price-->
-            <FlexLayout>
-                <Label Text="Price: RM" Padding="5,20,75,10" FontSize="20"/>
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Price: RM" Padding="5" FontSize="20" WidthRequest="120"/>
                 <Entry x:Name="inputFoodPrice" Placeholder="Enter price" Keyboard="Numeric"/>
             </FlexLayout>
 
-            <FlexLayout Padding="0,20,0,0">
-                <!--Food Type-->
-                <Label Text="Food Type:" Padding="5,15,50,10" FontSize="20"/>
+            <!--Calories-->
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Calories: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Entry x:Name="inputCalories" Placeholder="Enter cal" Keyboard="Numeric"/>
+            </FlexLayout>
+
+            <!--Carbo-->
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Carbo: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Entry x:Name="inputCarbo" Placeholder="Enter carbo" Keyboard="Numeric"/>
+            </FlexLayout>
+
+            <!--Fat-->
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Fat: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Entry x:Name="inputFat" Placeholder="Enter fat" Keyboard="Numeric"/>
+            </FlexLayout>
+
+            <!--Protein-->
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Protein: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Entry x:Name="inputProtein" Placeholder="Enter protein" Keyboard="Numeric"/>
+            </FlexLayout>
+
+
+            <!--Food Type-->
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Food Type:" Padding="5" FontSize="20" WidthRequest="120"/>
                 <Picker x:Name="foodType" Title="Food type">
                     <Picker.Items>
                         <x:String>Breakfast</x:String>
@@ -30,37 +56,36 @@
                     </Picker.Items>
                 </Picker>
             </FlexLayout>
-
+            
             <!--Date-->
-            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <Label Text="Date:" Padding="5" FontSize="20" WidthRequest="120"/>
                 <DatePicker x:Name="selectDate" DateSelected="onDatePickerSelected" Format="dd/MM/yyyy"/>
             </FlexLayout>
 
-            <Label></Label>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-            <!--Add & Clear-->
-            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="SpaceEvenly">
-                <Button x:Name="addButton" Text="ADD FOOD" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="ForestGreen" TextColor="White"  Clicked="OnAdd" />
-                <Button x:Name="clearButton" Text="CLEAR" VerticalOptions="CenterAndExpand" WidthRequest="110" BackgroundColor="LightSlateGray" TextColor="White"  Clicked="OnReset" />
-            </FlexLayout>
+                <!-- Display section -->
+                <StackLayout Orientation="Vertical" Margin="10">
+                    <Label x:Name="resFoodName" Text="Food Name: " FontAttributes="Bold"/>
+                    <Label x:Name="resFoodPrice" Text="Price: RM" FontAttributes="Bold"/>
+                    <Label x:Name="resCalories" Text="Calories: " FontAttributes="Bold"/>
+                    <Label x:Name="resCarbo" Text="Carbo: " FontAttributes="Bold"/>
+                    <Label x:Name="resFat" Text="Fat: " FontAttributes="Bold"/>
+                    <Label x:Name="resProtein" Text="Protein: " FontAttributes="Bold"/>
+                    <Label x:Name="resFoodType" Text="Food Type: " FontAttributes="Bold"/>
+                    <Label x:Name="resFoodTotal" Text="Total: RM" FontAttributes="Bold"/>
+                </StackLayout>
 
-            <Label></Label>
+                <!-- Buttons section -->
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <Button x:Name="addButton" Text="ADD FOOD" WidthRequest="110" BackgroundColor="ForestGreen" TextColor="White" Clicked="OnAdd"/>
+                    <Button x:Name="clearButton" Text="CLEAR" WidthRequest="110" BackgroundColor="LightSlateGray" TextColor="White" Clicked="OnReset"/>
+                    <Button x:Name="saveButton" Text="Save" WidthRequest="110" BackgroundColor="CadetBlue" TextColor="White" Clicked="OnSaveRecord"/>
+                </StackLayout>
 
-            <!--Display-->
-            <FlexLayout Direction="Column" AlignItems="Start" JustifyContent="Start" HorizontalOptions="Center">
-                <Label x:Name="resFoodName" Text="Food Name: " HorizontalTextAlignment="Center" FontAttributes="Bold"/>
-                <Label x:Name="resFoodPrice" Text="Price: RM" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
-                <Label x:Name="resFoodType" Text="Food Type: " HorizontalTextAlignment="Center" FontAttributes="Bold"/>
-                <Label x:Name="resFoodTotal" Text="Total: RM" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
-            </FlexLayout>
-            
-            <Label></Label>
-
-            <!--Save-->
-            <StackLayout HorizontalOptions="Center"
-                         WidthRequest="250">
-                <Button x:Name="saveButton" Text="Save" VerticalOptions="CenterAndExpand"  BackgroundColor="CadetBlue" Clicked="OnSaveRecord" />
             </StackLayout>
+
         </StackLayout>
     </ScrollView>
 

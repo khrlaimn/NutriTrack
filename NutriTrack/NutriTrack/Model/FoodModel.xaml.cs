@@ -23,13 +23,13 @@ namespace NutriTrack
             food = new ObservableCollection<Foods>
             {
                 new Foods{FoodName="Nasi Ayam", FoodStallName="Selera Indah", FoodImage="NasiAyam.png", FoodType="Breakast",
-                    FoodPrice=10.00, FoodCalories=102, FoodCarbo=20, FoodFat=30, FoodProtein=50 },
+                    FoodPrice=10.00, FoodCalories="102", FoodCarbo="20", FoodFat="30", FoodProtein="50" },
 
                 new Foods{FoodName="Nasi Goreng Cina", FoodStallName="Aneka Nasi Goreng", FoodImage="NasiGorengCina.jpeg", FoodType="Lunch",
-                    FoodPrice=20.00, FoodCalories=102, FoodCarbo=20, FoodFat=30, FoodProtein=50 },
+                    FoodPrice=20.00, FoodCalories="112", FoodCarbo="23", FoodFat="36", FoodProtein="50" },
 
                 new Foods{FoodName="Nasi Goreng Ayam", FoodStallName="Aneka Nasi Goreng", FoodImage="NasiAyam.png", FoodType="Dinner",
-                    FoodPrice=20.00, FoodCalories=122, FoodCarbo=80, FoodFat=50, FoodProtein=40 },
+                    FoodPrice=20.00, FoodCalories="132", FoodCarbo="30", FoodFat="60", FoodProtein="40" },
             };
 
             FoodCollectionView.ItemsSource = food;

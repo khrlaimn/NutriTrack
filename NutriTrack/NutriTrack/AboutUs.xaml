@@ -6,7 +6,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-
+                
+                <!--Developer Image-->
                 <FlexLayout 
                     Direction="Row"
                     AlignItems="Center"
@@ -40,7 +41,7 @@
                     VerticalTextAlignment="Center"
                     FontSize="Medium"
                 />
-
+                <!--NutriTrack Logo-->
                 <FlexLayout 
                     Direction="Row"
                     AlignItems="Center"

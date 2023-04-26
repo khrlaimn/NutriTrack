@@ -6,37 +6,43 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection;
 
 namespace NutriTrack
 {
     internal class FirebaseHelper
     {
         FirebaseClient firebase = new FirebaseClient("https://nutritrack-ka01-default-rtdb.asia-southeast1.firebasedatabase.app/");
-        public async Task AddRecord(string dt, string ft, string fn, double fp, double tp)
+        public async Task AddRecord(string fn, double fp, string fc, string fcarb, string fat, string protein, string ft, string dt, double tp)
 
-        {
-            await firebase.Child("Foods").PostAsync(new Foods() 
-            { 
-                DateRecorded = dt, FoodType = ft, FoodName = fn, FoodPrice = fp, TotalPrice = tp 
-            });
-        }
-        public async Task<List<Foods>> GetAllMealTrackerRecord()
-    {
-        return (await firebase.Child("Foods").OnceAsync<Foods>()).Select(item => new Foods
-        {
-            DateRecorded = item.Object.DateRecorded,
-            FoodType = item.Object.FoodType,
-            FoodName = item.Object.FoodName,
-            FoodPrice = item.Object.FoodPrice,
-            TotalPrice = item.Object.TotalPrice
-        }).ToList();
-    }
+                {
+                    await firebase.Child("Foods").PostAsync(new Foods() 
+                    {
+                        FoodName = fn, FoodPrice = fp, FoodCalories = fc, FoodCarbo = fcarb, FoodFat = fat, 
+                        FoodProtein = protein, FoodType = ft, DateRecorded = dt, TotalPrice = tp
+                    });
+                }
+        public async Task<List<Foods>> GetAllExpensesRecord()
+            {
+                return (await firebase.Child("Foods").OnceAsync<Foods>()).Select(item => new Foods
+                {
+                    FoodName = item.Object.FoodName,
+                    FoodPrice = item.Object.FoodPrice,
+                    FoodCalories = item.Object.FoodCalories,
+                    FoodCarbo = item.Object.FoodCarbo,
+                    FoodFat = item.Object.FoodFat,
+                    FoodProtein = item.Object.FoodProtein,
+                    FoodType = item.Object.FoodType,
+                    DateRecorded = item.Object.DateRecorded,
+                    TotalPrice = item.Object.TotalPrice
+                }).ToList();
+            }
 
         public async Task<List<Foods>> GetFindRecord(string FoodName)
-        {
-            var allMealTrackerRecord = await GetAllMealTrackerRecord();
-            await firebase.Child("Foods").OnceAsync<Foods>();
-            return allMealTrackerRecord.Where(a => a.FoodName == FoodName).ToList();
-        }
+            {
+                var allMealTrackerRecord = await GetAllExpensesRecord();
+                await firebase.Child("Foods").OnceAsync<Foods>();
+                return allMealTrackerRecord.Where(a => a.FoodName == FoodName).ToList();
+            }
     }
 }

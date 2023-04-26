@@ -40,7 +40,8 @@ namespace NutriTrack
                     new BurgerIconFlyoutMenuItem { Id = 1, Title = "Add Expenses",
                     TargetType=typeof(FoodModel)},
 
-                    new BurgerIconFlyoutMenuItem { Id = 2, Title = "Budgeting"},
+                    new BurgerIconFlyoutMenuItem { Id = 2, Title = "Expenses Record",
+                     TargetType=typeof(FoodRecord)},
 
                     new BurgerIconFlyoutMenuItem { Id = 3, Title = "Profile",
                     TargetType=typeof(ProfilePage)},
