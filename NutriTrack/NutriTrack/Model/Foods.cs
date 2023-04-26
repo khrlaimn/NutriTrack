@@ -6,6 +6,9 @@ namespace NutriTrack
 {
     class Foods
     {
+        public string FoodType { get; set; }
+        public double TotalPrice { get; set; }
+        public string DateRecorded { get; set; }
         public string FoodName { get; set; }
         public string FoodStallName { get; set; }
         public string FoodImage { get; set; }

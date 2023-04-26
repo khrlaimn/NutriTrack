@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NutriTrack.FoodModel">
-
+    
     <StackLayout>
 
         <CollectionView x:Name="FoodCollectionView">
@@ -79,7 +79,7 @@
 
                         <Button Text="Add"
                                 x:Name="addButton"
-                                Clicked="SaveButton"
+                                
                                 TextColor="White"
                                 BackgroundColor="Black"
                                 WidthRequest="200"

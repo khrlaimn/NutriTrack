@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutriTrack.Expenses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace NutriTrack
         async void OnExpensesClick(object sender, EventArgs args)
         {
 
-            await Navigation.PushAsync(new FoodModel());
+            await Navigation.PushAsync(new ExpensesForm());
         }
         async void OnBudgetingClick(object sender, EventArgs args)
         {
