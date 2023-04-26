@@ -77,6 +77,14 @@
                             </Label.FormattedText>
                         </Label>
 
+                        <Label 
+                            Text="{Binding FoodType}"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            FontSize="Body"
+                           FontAttributes="Italic"
+                            TextColor="Black" />
+
                         <Button Text="Add"
                                 x:Name="addButton"
                                 

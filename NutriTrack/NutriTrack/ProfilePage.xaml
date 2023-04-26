@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NutriTrack.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <FlexLayout 
+                    Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+
+                <Frame CornerRadius="180"
+                           BorderColor="Black"
+                            HeightRequest="80"
+                            WidthRequest="80">
+
+                    <ImageButton Source="GambarSaya.JPG"
+                                        Aspect="AspectFill" />
+
+                </Frame>
+            </FlexLayout>
+
+
+            <Label 
+                    Text="Aiman"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="Caption"
+                    FontAttributes="Bold"
+                    TextColor="Black" 
+                    />
+
+
+            <Label
+                    Text="Muhammad Khairul Aiman Bin Ahmad Faiza (SW01082162)"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    FontSize="Medium"
+                />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

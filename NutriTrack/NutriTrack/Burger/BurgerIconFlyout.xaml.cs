@@ -38,11 +38,12 @@ namespace NutriTrack
                     TargetType=typeof(MainPage) },
 
                     new BurgerIconFlyoutMenuItem { Id = 1, Title = "Add Expenses",
-                    TargetType=typeof(ExpensesForm)},
+                    TargetType=typeof(FoodModel)},
 
-                    new BurgerIconFlyoutMenuItem { Id = 2, Title = "Budgeting" },
+                    new BurgerIconFlyoutMenuItem { Id = 2, Title = "Budgeting"},
 
-                    new BurgerIconFlyoutMenuItem { Id = 3, Title = "Profile" },
+                    new BurgerIconFlyoutMenuItem { Id = 3, Title = "Profile",
+                    TargetType=typeof(ProfilePage)},
 
                     new BurgerIconFlyoutMenuItem { Id = 4, Title = "About Us",
                      TargetType=typeof(AboutUs) }

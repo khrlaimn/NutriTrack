@@ -23,55 +23,58 @@ namespace NutriTrack.Expenses
 
         void OnAdd(object sender, EventArgs e)
         {
-            // FoodType
-            string selectedFood = foodLabel.SelectedItem as string;
-            resMeal.Text = selectedFood;
+            //Food Name
+            string name = inputFoodName.Text;
+            resFoodName.Text = name;
 
-            //Name
-            string name = inputName.Text;
-            resName.Text = name;
+            //Food Price
+            double price = Convert.ToDouble(inputFoodPrice.Text);
+            resFoodPrice.Text = "RM" + price.ToString("0.00");
 
-            //Price
-            double price = Convert.ToDouble(inputPrice.Text);
-            resPrice.Text = "Rm " + price.ToString("0.00");
+            //Food Type
+            string selectedFood = foodType.SelectedItem as string;
+            resFoodType.Text = selectedFood;
         }
-
+        
+        //Reset Button
         void OnReset(object sender, EventArgs e)
         {
-            mealLabel.SelectedIndex = -1;
-            inputName.Text = "";
-            inputPrice.Text = "";
-            resMeal.Text = "Meal";
-            resName.Text = "Name";
-            resPrice.Text = "Rm";
+            inputFoodName.Text = "";
+            inputFoodPrice.Text = "";
+            foodType.SelectedIndex = -1;
+            resFoodName.Text = "Food Name: ";
+            resFoodPrice.Text = "RM";
+            resFoodType.Text = "Food Type: ";
         }
 
+        //Date
         void onDatePickerSelected(object sender, DateChangedEventArgs e)
         {
             var selectedDate = e.NewDate.ToString();
         }
 
+        //Save Button, Display
         async void OnSaveRecord(object sender, EventArgs e)
         {
 
             var selectdate = selectDate.Date.ToString("dd/MM/yyyy");
 
-            string selectedMeal = mealLabel.SelectedItem as string;
-            resMeal.Text = selectedMeal;
+            string name = inputFoodName.Text;
+            resFoodName.Text = "Food Name: " + name;
 
-            string name = inputName.Text;
-            resName.Text = name;
+            double price = Convert.ToDouble(inputFoodPrice.Text);
+            resFoodPrice.Text = "RM" + price.ToString("0.00");
 
-            double price = Convert.ToDouble(inputPrice.Text);
-            resPrice.Text = "Rm " + price.ToString("0.00");
+            string selectedMeal = foodType.SelectedItem as string;
+            resFoodType.Text = "Food Type: " + selectedMeal;
 
-            // Update the total spent and display it
+            // Update Total Price 
             totalSpent = totalSpent += price;
-            resTotal.Text = "Rm " + totalSpent.ToString("0.00");
+            resFoodTotal.Text = "Total: RM" + totalSpent.ToString("0.00");
 
             await firebaseHelper.AddRecord(selectdate, selectedMeal, name, price, totalSpent);
 
-            await DisplayAlert("Record Saved", "Your Spending Record has been saved", "OK");
+            await DisplayAlert("Record Saved", "Expense Record Saved ^_^", "OK");
         }
     }
 
