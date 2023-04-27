@@ -13,13 +13,13 @@ namespace NutriTrack
     internal class FirebaseHelper
     {
         FirebaseClient firebase = new FirebaseClient("https://nutritrack-ka01-default-rtdb.asia-southeast1.firebasedatabase.app/");
-        public async Task AddRecord(string fn, double fp, string fc, string fcarb, string fat, string protein, string ft, string dt, double tp)
+        public async Task AddRecord(string fn, double fp, string fc, string fcarb, string fat, string protein, string ft, string dt)
 
                 {
                     await firebase.Child("Foods").PostAsync(new Foods() 
                     {
                         FoodName = fn, FoodPrice = fp, FoodCalories = fc, FoodCarbo = fcarb, FoodFat = fat, 
-                        FoodProtein = protein, FoodType = ft, DateRecorded = dt, TotalPrice = tp
+                        FoodProtein = protein, FoodType = ft, DateRecorded = dt
                     });
                 }
         public async Task<List<Foods>> GetAllExpensesRecord()
@@ -34,7 +34,6 @@ namespace NutriTrack
                     FoodProtein = item.Object.FoodProtein,
                     FoodType = item.Object.FoodType,
                     DateRecorded = item.Object.DateRecorded,
-                    TotalPrice = item.Object.TotalPrice
                 }).ToList();
             }
 

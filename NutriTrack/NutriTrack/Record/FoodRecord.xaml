@@ -17,7 +17,6 @@
                                 <Label Grid.Column="1" Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
                                 <Label Grid.Column="2" Text="Price" HorizontalOptions="Center" FontAttributes="Bold" />
                                 <Label Grid.Column="3" Text="Type" HorizontalOptions="Center" FontAttributes="Bold"/>
-                                <Label Grid.Column="4" Text="Total" HorizontalOptions="Center" FontAttributes="Bold" />
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
@@ -28,7 +27,6 @@
                                         <Label Grid.Column="1" Text="{Binding FoodName}" HorizontalOptions="Center" />
                                         <Label Grid.Column="2" Text="{Binding FoodPrice}" HorizontalOptions="Center" />
                                         <Label Grid.Column="3" Text="{Binding FoodType}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="4" Text="{Binding TotalPrice}" HorizontalOptions="Center" />
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>
@@ -49,10 +47,11 @@
                         <ListView.Header>
                             <Grid>
                                 <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
-                                <Label Grid.Column="1" Text="Cal" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="2" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="3" Text="Fat" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="4" Text="Carbo" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="1" Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Grid.Column="2" Text="Cal" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="3" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="4" Text="Fat" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="5" Text="Carbo" HorizontalOptions="Center" FontAttributes="Bold" />
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
@@ -60,10 +59,11 @@
                                 <ViewCell>
                                     <Grid>
                                         <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="1" Text="{Binding FoodCalories}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="2" Text="{Binding FoodProtein}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="3" Text="{Binding FoodFat}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="4" Text="{Binding FoodCarbo}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="1" Text="{Binding FoodName}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="2" Text="{Binding FoodCalories}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="3" Text="{Binding FoodProtein}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="4" Text="{Binding FoodFat}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="5" Text="{Binding FoodCarbo}" HorizontalOptions="Center" />
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>

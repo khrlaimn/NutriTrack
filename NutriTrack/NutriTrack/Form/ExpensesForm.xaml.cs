@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.IO;
-
+using Xamarin.Essentials;
 
 namespace NutriTrack.Expenses
 {
     public partial class ExpensesForm : ContentPage
     {
         FirebaseHelper firebaseHelper = new FirebaseHelper();
-        private double totalPrice = 0.00;
         public ExpensesForm()
         {
             InitializeComponent();
@@ -51,7 +50,15 @@ namespace NutriTrack.Expenses
             string protein = inputProtein.Text;
             resProtein.Text = "Protein: " + protein;
         }
-        
+        //Nutri Button
+        async void OnNutriRecord(object sender, EventArgs args)
+        {
+
+            await Browser.OpenAsync("https://myfcd.moh.gov.my/index.html", BrowserLaunchMode.SystemPreferred);
+
+        }
+
+
         //Reset Button
         void OnReset(object sender, EventArgs e)
         {
@@ -104,11 +111,9 @@ namespace NutriTrack.Expenses
 
             var selectdate = selectDate.Date.ToString("dd/MM/yyyy");
 
-            // Update Total Price 
-            totalPrice = totalPrice += price;
-            resFoodTotal.Text = "Total: RM" + totalPrice.ToString("0.00");
+            
 
-            await firebaseHelper.AddRecord(name, price, cal, carbo, fat, protein, selectedFoodType, selectdate, totalPrice);
+            await firebaseHelper.AddRecord(name, price, cal, carbo, fat, protein, selectedFoodType, selectdate);
 
             await DisplayAlert("Record Saved", "Expense Record Saved ^_^", "OK");
         }

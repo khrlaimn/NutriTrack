@@ -54,7 +54,7 @@
                             <ViewCell>
                                 <Grid>
                                     <Label Text="{Binding DateRecorded}" HorizontalOptions="Center"/>
-                                    <Label Grid.Column="1" Text="{Binding TotalPrice}" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="1" Text="{Binding FoodPrice}" HorizontalOptions="Center"/>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

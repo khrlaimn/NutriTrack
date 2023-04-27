@@ -14,7 +14,7 @@
 
             <!--Food Price-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Price: RM" Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Price(RM): " Padding="5" FontSize="20" WidthRequest="120"/>
                 <Entry x:Name="inputFoodPrice" Placeholder="Enter price" Keyboard="Numeric"/>
             </FlexLayout>
 
@@ -26,19 +26,19 @@
 
             <!--Carbo-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Carbo: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Carbo(g): " Padding="5" FontSize="20" WidthRequest="120"/>
                 <Entry x:Name="inputCarbo" Placeholder="Enter carbo" Keyboard="Numeric"/>
             </FlexLayout>
 
             <!--Fat-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Fat: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Fat(g): " Padding="5" FontSize="20" WidthRequest="120"/>
                 <Entry x:Name="inputFat" Placeholder="Enter fat" Keyboard="Numeric"/>
             </FlexLayout>
 
             <!--Protein-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Protein: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Protein(g): " Padding="5" FontSize="20" WidthRequest="120"/>
                 <Entry x:Name="inputProtein" Placeholder="Enter protein" Keyboard="Numeric"/>
             </FlexLayout>
 
@@ -64,29 +64,30 @@
             </FlexLayout>
 
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-
                 <!-- Display section -->
                 <StackLayout Orientation="Vertical" Margin="10">
-                    <Label x:Name="resFoodName" Text="Food Name: " FontAttributes="Bold"/>
+                    <Label x:Name="resFoodName" Text="Food Name:" FontAttributes="Bold"/>
                     <Label x:Name="resFoodPrice" Text="Price: RM" FontAttributes="Bold"/>
-                    <Label x:Name="resCalories" Text="Calories: " FontAttributes="Bold"/>
-                    <Label x:Name="resCarbo" Text="Carbo: " FontAttributes="Bold"/>
-                    <Label x:Name="resFat" Text="Fat: " FontAttributes="Bold"/>
-                    <Label x:Name="resProtein" Text="Protein: " FontAttributes="Bold"/>
-                    <Label x:Name="resFoodType" Text="Food Type: " FontAttributes="Bold"/>
-                    <Label x:Name="resFoodTotal" Text="Total: RM" FontAttributes="Bold"/>
+                    <Label x:Name="resCalories" Text="Calories:" FontAttributes="Bold"/>
+                    <Label x:Name="resCarbo" Text="Carbo:" FontAttributes="Bold"/>
+                    <Label x:Name="resFat" Text="Fat:" FontAttributes="Bold"/>
+                    <Label x:Name="resProtein" Text="Protein:" FontAttributes="Bold"/>
+                    <Label x:Name="resFoodType" Text="Food Type:" FontAttributes="Bold"/>
                 </StackLayout>
 
                 <!-- Buttons section -->
-                <StackLayout Orientation="Horizontal" Margin="10">
+                <StackLayout Orientation="Horizontal" Margin="5">
                     <Button x:Name="addButton" Text="ADD FOOD" WidthRequest="110" BackgroundColor="ForestGreen" TextColor="White" Clicked="OnAdd"/>
                     <Button x:Name="clearButton" Text="CLEAR" WidthRequest="110" BackgroundColor="LightSlateGray" TextColor="White" Clicked="OnReset"/>
                     <Button x:Name="saveButton" Text="Save" WidthRequest="110" BackgroundColor="CadetBlue" TextColor="White" Clicked="OnSaveRecord"/>
                 </StackLayout>
-
+                <StackLayout Orientation="Horizontal" Margin="5">
+                    <Button x:Name="nutriButton" Text="Nutri Info" WidthRequest="110" BackgroundColor="CornflowerBlue" TextColor="White" Clicked="OnNutriRecord"/>
+                </StackLayout>
             </StackLayout>
 
         </StackLayout>
+        
     </ScrollView>
 
 </ContentPage>
