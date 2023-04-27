@@ -15,8 +15,8 @@
 
                     <Frame CornerRadius="180"
                            BorderColor="Black"
-                            HeightRequest="80"
-                            WidthRequest="80">
+                            HeightRequest="150"
+                            WidthRequest="150">
 
                         <ImageButton Source="GambarSaya.JPG"
                                         Aspect="AspectFill" />
@@ -49,8 +49,8 @@
 
                     <Frame CornerRadius="180"
                            BorderColor="Black"
-                            HeightRequest="80"
-                            WidthRequest="80">
+                            HeightRequest="100"
+                            WidthRequest="100">
 
                         <ImageButton Source="NutriTrackLogo.png"
                                         Aspect="AspectFill" />

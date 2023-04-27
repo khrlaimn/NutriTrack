@@ -40,17 +40,28 @@
                 VerticalTextAlignment="Center"
                 FontSize="Medium"/>
 
-            <Label FontAttributes="Bold"
-                               FontSize="Medium"
-                               HorizontalTextAlignment="Center"
-                               VerticalTextAlignment="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="RM " />
-                        <Span Text="{Binding TotalFoodPrice}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+
+            <StackLayout HorizontalOptions="Fill">
+                <ListView x:Name="display" ItemsSource="{Binding DateRecorded}">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="Total Spent" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Text="{Binding DateRecorded}" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="1" Text="{Binding TotalPrice}" HorizontalOptions="Center"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
 
         </StackLayout>
         

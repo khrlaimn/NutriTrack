@@ -5,7 +5,7 @@
 
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            Title="Overview"
+            Title="Spending"
             x:Name="OverallSpendingTabs">
         <ContentPage.Content>
             <ScrollView>
@@ -18,10 +18,6 @@
                                 <Label Grid.Column="2" Text="Price" HorizontalOptions="Center" FontAttributes="Bold" />
                                 <Label Grid.Column="3" Text="Type" HorizontalOptions="Center" FontAttributes="Bold"/>
                                 <Label Grid.Column="4" Text="Total" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="5" Text="Cal" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="6" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="7" Text="Fat" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="8" Text="Carbo" HorizontalOptions="Center" FontAttributes="Bold" />
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
@@ -33,10 +29,41 @@
                                         <Label Grid.Column="2" Text="{Binding FoodPrice}" HorizontalOptions="Center" />
                                         <Label Grid.Column="3" Text="{Binding FoodType}" HorizontalOptions="Center" />
                                         <Label Grid.Column="4" Text="{Binding TotalPrice}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="5" Text="{Binding FoodCalories}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="6" Text="{Binding FoodProtein}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="7" Text="{Binding FoodFat}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="8" Text="{Binding FoodCarbo}" HorizontalOptions="Center" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            Title="Nutritional Details"
+            x:Name="OverallNutri">
+        <ContentPage.Content>
+            <ScrollView>
+                <StackLayout HorizontalOptions="Fill" Padding="0,20,0,0">
+                    <ListView x:Name="displayNutri" ItemsSource="{Binding DateRecorded}">
+                        <ListView.Header>
+                            <Grid>
+                                <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Grid.Column="1" Text="Cal" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="2" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="3" Text="Fat" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="4" Text="Carbo" HorizontalOptions="Center" FontAttributes="Bold" />
+                            </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="1" Text="{Binding FoodCalories}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="2" Text="{Binding FoodProtein}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="3" Text="{Binding FoodFat}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="4" Text="{Binding FoodCarbo}" HorizontalOptions="Center" />
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>

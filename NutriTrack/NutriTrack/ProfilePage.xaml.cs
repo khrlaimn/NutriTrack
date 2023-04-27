@@ -12,17 +12,15 @@ namespace NutriTrack
 {
     public partial class ProfilePage : ContentPage
     {
-        ObservableCollection<Foods> food;
         FirebaseHelper firebaseHelper = new FirebaseHelper();
         public ProfilePage()
         {
             InitializeComponent();
-
-            food = new ObservableCollection<Foods>
-            {
-                new Foods{FoodName="Nasi Ayam", FoodStallName="Selera Indah", FoodImage="NasiAyam.png", FoodType="Breakast",
-                    FoodPrice=10.00, FoodCalories = "102", FoodCarbo = "20", FoodFat = "30", FoodProtein="50" }
-            };
+        }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            display.ItemsSource = await firebaseHelper.GetAllExpensesRecord();
         }
     } 
 }

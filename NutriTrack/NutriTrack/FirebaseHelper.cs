@@ -40,9 +40,9 @@ namespace NutriTrack
 
         public async Task<List<Foods>> GetFindRecord(string FoodName)
             {
-                var allMealTrackerRecord = await GetAllExpensesRecord();
+                var allFoodRecord = await GetAllExpensesRecord();
                 await firebase.Child("Foods").OnceAsync<Foods>();
-                return allMealTrackerRecord.Where(a => a.FoodName == FoodName).ToList();
+                return allFoodRecord.Where(a => a.FoodName == FoodName).ToList();
             }
     }
 }

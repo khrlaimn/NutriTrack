@@ -26,9 +26,10 @@ namespace NutriTrack
                 base.OnAppearing();
                 display.ItemsSource = await firebaseHelper.GetAllExpensesRecord();
             }
-            else if (CurrentPage is ContentPage FindStatusTab)
+            if (CurrentPage is ContentPage OverallNutri)
             {
                 base.OnAppearing();
+                displayNutri.ItemsSource = await firebaseHelper.GetAllExpensesRecord();
             }
         }
     }
