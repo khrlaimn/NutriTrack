@@ -26,16 +26,10 @@
             </FlexLayout>
             
             <!--User Name-->
-            <Label 
-                Text="Aiman"
-                HorizontalTextAlignment="Center"
-                VerticalTextAlignment="Center"
-                FontSize="Caption"
-                FontAttributes="Bold"
-                TextColor="Black" />
-
             <Label
-                Text="Muhammad Khairul Aiman Bin Ahmad Faiza (SW01082162)"
+                Text="Aiman"
+                FontAttributes="Bold"
+                TextColor="Black" 
                 HorizontalTextAlignment="Center"
                 VerticalTextAlignment="Center"
                 FontSize="Medium"/>

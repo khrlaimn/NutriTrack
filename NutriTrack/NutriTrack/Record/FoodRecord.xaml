@@ -43,27 +43,25 @@
         <ContentPage.Content>
             <ScrollView>
                 <StackLayout HorizontalOptions="Fill" Padding="0,20,0,0">
-                    <ListView x:Name="displayNutri" ItemsSource="{Binding DateRecorded}">
+                    <ListView x:Name="displayNutri" ItemsSource="{Binding FoodName}">
                         <ListView.Header>
                             <Grid>
-                                <Label Text="Date" HorizontalOptions="Center" FontAttributes="Bold"/>
-                                <Label Grid.Column="1" Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
-                                <Label Grid.Column="2" Text="Cal" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="3" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="4" Text="Fat" HorizontalOptions="Center" FontAttributes="Bold" />
-                                <Label Grid.Column="5" Text="Carbo" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Text="Name" HorizontalOptions="Center" FontAttributes="Bold"/>
+                                <Label Grid.Column="1" Text="Cal" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="2" Text="Protein" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="3" Text="Fat" HorizontalOptions="Center" FontAttributes="Bold" />
+                                <Label Grid.Column="4" Text="Carbo" HorizontalOptions="Center" FontAttributes="Bold" />
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid>
-                                        <Label Text="{Binding DateRecorded}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="1" Text="{Binding FoodName}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="2" Text="{Binding FoodCalories}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="3" Text="{Binding FoodProtein}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="4" Text="{Binding FoodFat}" HorizontalOptions="Center" />
-                                        <Label Grid.Column="5" Text="{Binding FoodCarbo}" HorizontalOptions="Center" />
+                                        <Label Text="{Binding FoodName}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="1" Text="{Binding FoodCalories}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="2" Text="{Binding FoodProtein}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="3" Text="{Binding FoodFat}" HorizontalOptions="Center" />
+                                        <Label Grid.Column="4" Text="{Binding FoodCarbo}" HorizontalOptions="Center" />
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>

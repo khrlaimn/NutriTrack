@@ -9,8 +9,8 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
       <ListView.Header>
-          <Grid BackgroundColor="#B8B8B8 ">
-          <Grid.ColumnDefinitions>
+                <Grid BackgroundColor="#FD9032 ">
+                    <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>

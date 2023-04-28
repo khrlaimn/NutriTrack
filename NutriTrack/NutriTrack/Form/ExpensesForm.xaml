@@ -77,12 +77,12 @@
 
                 <!-- Buttons section -->
                 <StackLayout Orientation="Horizontal" Margin="5">
-                    <Button x:Name="addButton" Text="ADD FOOD" WidthRequest="110" BackgroundColor="ForestGreen" TextColor="White" Clicked="OnAdd"/>
-                    <Button x:Name="clearButton" Text="CLEAR" WidthRequest="110" BackgroundColor="LightSlateGray" TextColor="White" Clicked="OnReset"/>
-                    <Button x:Name="saveButton" Text="Save" WidthRequest="110" BackgroundColor="CadetBlue" TextColor="White" Clicked="OnSaveRecord"/>
+                    <Button x:Name="addButton" Text="ADD FOOD" WidthRequest="110" BackgroundColor="#00C811" TextColor="White" Clicked="OnAdd"/>
+                    <Button x:Name="clearButton" Text="CLEAR" WidthRequest="110" BackgroundColor="#A3A3A3" TextColor="White" Clicked="OnReset"/>
+                    <Button x:Name="saveButton" Text="Save" WidthRequest="110" BackgroundColor="#4F8EC6" TextColor="White" Clicked="OnSaveRecord"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Margin="5">
-                    <Button x:Name="nutriButton" Text="Nutri Info" WidthRequest="110" BackgroundColor="CornflowerBlue" TextColor="White" Clicked="OnNutriRecord"/>
+                    <Button x:Name="nutriButton" Text="Nutri Info" WidthRequest="110" BackgroundColor="#FFB140" TextColor="White" Clicked="OnNutriRecord"/>
                 </StackLayout>
             </StackLayout>
 

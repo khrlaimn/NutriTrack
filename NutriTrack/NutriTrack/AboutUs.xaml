@@ -6,72 +6,67 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                
-                <!--Developer Image-->
+
+                <!-- Developer Image -->
                 <FlexLayout 
                     Direction="Row"
-                    AlignItems="Center"
-                    JustifyContent="SpaceEvenly">
+                    JustifyContent="SpaceEvenly"
+                    AlignItems="Center">
 
-                    <Frame CornerRadius="180"
-                           BorderColor="Black"
-                            HeightRequest="150"
-                            WidthRequest="150">
+                    <Frame BorderColor="Black"
+                           CornerRadius="180"
+                           HeightRequest="150"
+                           WidthRequest="150">
 
                         <ImageButton Source="GambarSaya.JPG"
-                                        Aspect="AspectFill" />
+                                     Aspect="AspectFill" />
 
                     </Frame>
                 </FlexLayout>
 
-
                 <Label 
                     Text="Developer"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
                     FontSize="Caption"
                     FontAttributes="Bold"
                     TextColor="Black" 
-                    />
-
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
 
                 <Label
                     Text="Muhammad Khairul Aiman Bin Ahmad Faiza (SW01082162)"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
                     FontSize="Medium"
-                />
-                <!--NutriTrack Logo-->
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
+
+                <!-- NutriTrack Logo -->
                 <FlexLayout 
                     Direction="Row"
-                    AlignItems="Center"
-                    JustifyContent="SpaceEvenly">
+                    JustifyContent="SpaceEvenly"
+                    AlignItems="Center">
 
-                    <Frame CornerRadius="180"
-                           BorderColor="Black"
-                            HeightRequest="100"
-                            WidthRequest="100">
+                    <Frame BorderColor="Black"
+                           CornerRadius="180"
+                           HeightRequest="100"
+                           WidthRequest="100">
 
                         <ImageButton Source="NutriTrackLogo.png"
-                                        Aspect="AspectFill" />
+                                     Aspect="AspectFill" />
 
                     </Frame>
                 </FlexLayout>
 
                 <Label
                     Text="NutriTrack is a mental health mobile app designed for university students to track their meal expenses and find healthy and affordable meal options on campus. It allows users to register their meal expenses, covering a wide variety of cafeteria meals and providing nutritional information. NutriTrack aims to make healthy eating more accessible and cost-effective for its users, helping them make wise decisions about their food consumption and spending."
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"  
                     FontSize="Body"
-                />
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
 
                 <Label
                     Text="Version 1.0"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    FontAttributes="Italic"
                     FontSize="Micro"
-                 />
+                    FontAttributes="Italic"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
 
             </StackLayout>
         </ScrollView>
