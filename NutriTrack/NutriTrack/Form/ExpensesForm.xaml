@@ -8,44 +8,44 @@
 
             <!--Food Name-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Name:" Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Name:" Padding="5" FontSize="18" WidthRequest="120"/>
                 <Entry x:Name="inputFoodName" Placeholder="Enter food" Keyboard="Text"/>
             </FlexLayout>
 
             <!--Food Price-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Price(RM): " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Price(RM): " Padding="5" FontSize="18" WidthRequest="120"/>
                 <Entry x:Name="inputFoodPrice" Placeholder="Enter price" Keyboard="Numeric"/>
             </FlexLayout>
 
             <!--Calories-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Calories: " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Calories: " Padding="5" FontSize="18" WidthRequest="120"/>
                 <Entry x:Name="inputCalories" Placeholder="Enter cal" Keyboard="Numeric"/>
             </FlexLayout>
 
             <!--Carbo-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Carbo(g): " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Carbo(g): " Padding="5" FontSize="18" WidthRequest="120"/>
                 <Entry x:Name="inputCarbo" Placeholder="Enter carbo" Keyboard="Numeric"/>
             </FlexLayout>
 
             <!--Fat-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Fat(g): " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Fat(g): " Padding="5" FontSize="18" WidthRequest="120"/>
                 <Entry x:Name="inputFat" Placeholder="Enter fat" Keyboard="Numeric"/>
             </FlexLayout>
 
             <!--Protein-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Protein(g): " Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Protein(g): " Padding="5" FontSize="18" WidthRequest="120"/>
                 <Entry x:Name="inputProtein" Placeholder="Enter protein" Keyboard="Numeric"/>
             </FlexLayout>
 
 
             <!--Food Type-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Food Type:" Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Food Type:" Padding="5" FontSize="18" WidthRequest="120"/>
                 <Picker x:Name="foodType" Title="Food type">
                     <Picker.Items>
                         <x:String>Breakfast</x:String>
@@ -59,7 +59,7 @@
             
             <!--Date-->
             <FlexLayout Direction="Row" AlignItems="Center">
-                <Label Text="Date:" Padding="5" FontSize="20" WidthRequest="120"/>
+                <Label Text="Date:" Padding="5" FontSize="18" WidthRequest="120"/>
                 <DatePicker x:Name="selectDate" DateSelected="onDatePickerSelected" Format="dd/MM/yyyy"/>
             </FlexLayout>
 
