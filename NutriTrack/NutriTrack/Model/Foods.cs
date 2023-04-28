@@ -14,7 +14,6 @@ namespace NutriTrack
         public string FoodProtein { get; set; }
         public string FoodType { get; set; }
         public string DateRecorded { get; set; }
-        public double TotalPrice { get; set; }
         public string FoodStallName { get; set; }
         public string FoodImage { get; set; }
     }
