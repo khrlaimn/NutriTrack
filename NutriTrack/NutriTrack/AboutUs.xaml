@@ -56,7 +56,7 @@
                 </FlexLayout>
 
                 <Label
-                    Text="NutriTrack is a mental health mobile app designed for university students to track their meal expenses and find healthy and affordable meal options on campus. It allows users to register their meal expenses, covering a wide variety of cafeteria meals and providing nutritional information. NutriTrack aims to make healthy eating more accessible and cost-effective for its users, helping them make wise decisions about their food consumption and spending."
+                    Text="NutriTrack is a mental health mobile app that assists university students in keeping track of their food expenses and recording their nutritional consumption. By giving users a tool to make tracking expenses simpler, NutriTrack aims to solve problems faced by students that have problem to monitor their spending and nutritional intake."
                     FontSize="Body"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center" />
